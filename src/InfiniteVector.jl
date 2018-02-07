@@ -1,5 +1,7 @@
 module InfiniteVector
 
-# package code goes here
+include("AbstractInfiniteVector.jl")
+include("RangeInfiniteVector.jl")
+include("DiscreteInfiniteVector.jl")
 
 end # module

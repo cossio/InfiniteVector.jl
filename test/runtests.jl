@@ -1,5 +1,2 @@
-using InfiniteVector
-using Base.Test
-
-# write your own tests here
-@test 1 == 2
+include("RangeInfiniteVector.jl")
+include("DiscreteInfiniteVector.jl")
