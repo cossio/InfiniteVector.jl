@@ -44,6 +44,8 @@ function Base.:+(x::RangeInfiniteVector, y::RangeInfiniteVector)
 end
 
 Base.:-(x::RangeInfiniteVector) = RangeInfiniteVector(x.support, -x.default, -x.values)
+Base.:*(x::RangeInfiniteVector, y::Number) = RangeInfiniteVector(x.support, x.default * y, x.values * y)
+Base.:*(x::Number, y::RangeInfiniteVector) = y * x
 Base.:-(x::RangeInfiniteVector, y::RangeInfiniteVector) = x + (-y)
 
 maximum(x::RangeInfiniteVector) = max(x.default, maximum(x.values))
